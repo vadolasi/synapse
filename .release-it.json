@@ -1,0 +1,27 @@
+{
+	"git": {
+		"commitMessage": "chore: release v${version}",
+		"tagName": "v${version}",
+		"requireCleanWorkingDir": true,
+		"commitArgs": ["--no-verify"]
+	},
+	"npm": {
+		"publish": false,
+		"versionArgs": ["--allow-same-version"]
+	},
+	"github": {
+		"release": false
+	},
+	"plugins": {
+		"@release-it/conventional-changelog": {
+			"preset": "angular",
+			"infile": "CHANGELOG.md",
+			"header": "# Changelog",
+			"ignoreRecommendedBump": true
+		}
+	},
+	"hooks": {
+		"before:init": ["bun run format"],
+		"after:bump": "bun run build"
+	}
+}
