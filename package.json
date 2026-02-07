@@ -1,6 +1,6 @@
 {
 	"name": "synapse",
-	"version": "0.0.0",
+	"version": "0.0.1",
 	"scripts": {
 		"dev": "bun run build && electrobun dev",
 		"dev:hmr": "concurrently \"bun run hmr\" \"bun run dev\"",
