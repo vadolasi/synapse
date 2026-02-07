@@ -1,5 +1,11 @@
+import DjotEditor from "@/components/editor/DjotEditor"
+
 const MainPage: React.FC = () => {
-  return <h1>Main Page</h1>
+  return (
+    <div className="mx-auto w-full max-w-3xl p-6">
+      <DjotEditor />
+    </div>
+  )
 }
 
 export default MainPage
